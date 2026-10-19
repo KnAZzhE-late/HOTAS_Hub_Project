@@ -1,0 +1,375 @@
+* {
+    font-family: "Segoe UI";
+    font-size: 10pt;
+    color: #dce6ef;
+}
+
+QMainWindow,
+QWidget {
+    background-color: #0e131a;
+}
+
+/* ---------------------------------------------------------
+   Боковая панель
+   --------------------------------------------------------- */
+
+QFrame#sidebar {
+    background-color: #111820;
+    border-right: 1px solid #26313e;
+}
+
+QLabel#logo {
+    color: #ffffff;
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+QLabel#logoSubtitle {
+    color: #00d6ff;
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+QFrame#navItem {
+    background-color: transparent;
+    border: none;
+}
+
+QPushButton#navButton {
+    text-align: left;
+    padding: 11px 15px;
+
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    background-color: transparent;
+    color: #9daaba;
+}
+
+QPushButton#navButton:hover {
+    background-color: #18212b;
+    color: #ffffff;
+}
+
+QPushButton#navButton:checked {
+    background-color: #16303b;
+    color: #00d6ff;
+    border-left: 3px solid #00d6ff;
+}
+
+/*
+Цветной сегмент справа от кнопки устройства.
+*/
+
+QFrame#deviceStatusSegment {
+    background-color: #572834;
+
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+QFrame#deviceStatusSegment[connected="true"] {
+    background-color: #22c77a;
+}
+
+QPushButton#scanButton {
+    background-color: #1a242f;
+    border: 1px solid #354352;
+    color: #b7c3d0;
+    font-weight: 500;
+}
+
+QPushButton#scanButton:hover {
+    background-color: #263440;
+    border-color: #506175;
+    color: #ffffff;
+}
+
+QPushButton#scanButton:disabled {
+    background-color: #151c25;
+    border-color: #28333e;
+    color: #647181;
+}
+
+/* ---------------------------------------------------------
+   Заголовки и текст
+   --------------------------------------------------------- */
+
+QLabel#pageTitle {
+    font-size: 20pt;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+QLabel#dialogTitle {
+    font-size: 18pt;
+    font-weight: 600;
+}
+
+QLabel#sectionTitle {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+QLabel#mutedLabel {
+    color: #7f8c9b;
+}
+
+QLabel#axisName {
+    color: #9eadbc;
+    font-weight: 600;
+}
+
+QLabel#axisValue {
+    color: #00d6ff;
+    font-family: "Consolas";
+    font-size: 10pt;
+}
+
+QLabel#calibrationRange {
+    color: #00d6ff;
+    font-family: "Consolas";
+    font-size: 12pt;
+}
+
+/* ---------------------------------------------------------
+   Состояние подключения на странице устройства
+   --------------------------------------------------------- */
+
+QLabel#connectionStatus {
+    padding: 5px 11px;
+    border-radius: 10px;
+
+    color: #94a3b8;
+    background-color: #202833;
+}
+
+QLabel#connectionStatus[connected="true"] {
+    color: #7df0b2;
+    background-color: #17382b;
+}
+
+/* ---------------------------------------------------------
+   Карточки и верхняя панель
+   --------------------------------------------------------- */
+
+QFrame#pageHeader {
+    background-color: #131a23;
+    border-bottom: 1px solid #26313e;
+}
+
+QFrame#card {
+    background-color: #151b24;
+    border: 1px solid #283340;
+    border-radius: 8px;
+}
+
+QFrame#settingsSubFrame {
+    background-color: #111820;
+    border: 1px solid #26313e;
+    border-radius: 6px;
+}
+
+QFrame#axisBarFrame {
+    background-color: transparent;
+    border: none;
+}
+
+/* ---------------------------------------------------------
+   Обычные кнопки
+   --------------------------------------------------------- */
+
+QPushButton {
+    background-color: #202a35;
+
+    border: 1px solid #354352;
+    border-radius: 5px;
+
+    padding: 8px 14px;
+}
+
+QPushButton:hover {
+    background-color: #293645;
+    border-color: #4d6074;
+}
+
+QPushButton:pressed {
+    background-color: #18212b;
+}
+
+QPushButton:disabled {
+    background-color: #171e27;
+    border-color: #28333e;
+    color: #5e6a78;
+}
+
+QPushButton#primaryButton {
+    background-color: #00a8cc;
+    border-color: #00d6ff;
+
+    color: #ffffff;
+    font-weight: 600;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #00bddd;
+}
+
+QPushButton#primaryButton:pressed {
+    background-color: #008cab;
+}
+
+QPushButton#primaryButton:disabled {
+    background-color: #23424c;
+    border-color: #34545e;
+    color: #748d95;
+}
+
+/* ---------------------------------------------------------
+   Толстые индикаторы осей
+   --------------------------------------------------------- */
+
+QProgressBar#axisProgressBar {
+    min-height: 18px;
+    max-height: 18px;
+
+    border: 1px solid #3a4755;
+    border-radius: 8px;
+
+    background-color: #242e3a;
+}
+
+QProgressBar#axisProgressBar::chunk {
+    border-radius: 7px;
+
+    background-color: #00ccea;
+    border: 1px solid #24def8;
+}
+
+/*
+Обычный ProgressBar, используемый мастером калибровки.
+*/
+
+QProgressBar {
+    min-height: 11px;
+    max-height: 11px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #27313d;
+}
+
+QProgressBar::chunk {
+    border-radius: 5px;
+    background-color: #00ccea;
+}
+
+/* ---------------------------------------------------------
+   Поля настроек
+   --------------------------------------------------------- */
+
+QSpinBox,
+QDoubleSpinBox {
+    min-width: 100px;
+
+    padding: 6px;
+
+    background-color: #0e141c;
+
+    border: 1px solid #334150;
+    border-radius: 4px;
+}
+
+QSpinBox:focus,
+QDoubleSpinBox:focus {
+    border-color: #00ccea;
+}
+
+QSpinBox:disabled,
+QDoubleSpinBox:disabled {
+    background-color: #151b22;
+    border-color: #26313b;
+    color: #596674;
+}
+
+/* ---------------------------------------------------------
+   Флажки
+   --------------------------------------------------------- */
+
+QCheckBox {
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 17px;
+    height: 17px;
+
+    border: 1px solid #506071;
+    border-radius: 3px;
+
+    background-color: #0e141c;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #718397;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #00ccea;
+    border-color: #00e1ff;
+}
+
+QCheckBox::indicator:disabled {
+    background-color: #181f27;
+    border-color: #303b46;
+}
+
+/* ---------------------------------------------------------
+   Прокрутка
+   --------------------------------------------------------- */
+
+QScrollArea {
+    border: none;
+}
+
+QScrollBar:vertical {
+    width: 10px;
+    background-color: #111820;
+}
+
+QScrollBar::handle:vertical {
+    min-height: 30px;
+
+    border-radius: 5px;
+    background-color: #354352;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #46586b;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ---------------------------------------------------------
+   Строка состояния
+   --------------------------------------------------------- */
+
+QStatusBar {
+    background-color: #111820;
+    border-top: 1px solid #26313e;
+    color: #98a7b7;
+}
+
+QStatusBar::item {
+    border: none;
+}
